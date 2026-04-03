@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [K8s-Enterprise-Test-Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="SystemAutomationTest(failed)" verbose="0">
+    <classes>
+      <class name="com.auto.tests.PageLoadTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testHomePageLoadAfterLogin"/>
+          <include name="startBrowser"/>
+        </methods>
+      </class> <!-- com.auto.tests.PageLoadTest -->
+      <class name="com.auto.tests.LoginTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testSSOLoginSuccess"/>
+          <include name="startBrowser"/>
+        </methods>
+      </class> <!-- com.auto.tests.LoginTest -->
+      <class name="com.auto.tests.FormFlowTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testFormSubmitFlow"/>
+          <include name="startBrowser"/>
+        </methods>
+      </class> <!-- com.auto.tests.FormFlowTest -->
+    </classes>
+  </test> <!-- SystemAutomationTest(failed) -->
+</suite> <!-- Failed suite [K8s-Enterprise-Test-Suite] -->

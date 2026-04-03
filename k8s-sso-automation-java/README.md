@@ -25,3 +25,18 @@ Kubernetes 企业级 SSO 单点登录 UI 自动化测试框架
 3. 查看运行状态
    kubectl logs job/k8s-sso-automation-job
 4. 获取测试报告完成验证
+## 3. 如何在 Kubernetes 环境中部署和运行测试框架
+### 3.1 前置依赖
+- Kubernetes 1.24+ 集群
+- Docker 20.10+
+- kubectl 配置完成
+
+### 3.2 构建Docker镜像
+   dockerfile
+# Dockerfile
+FROM selenium/standalone-chrome:latest
+WORKDIR /app
+COPY target/k8s-sso-automation-java-1.0.jar /app/
+COPY pom.xml /app/
+RUN sudo apt-get update && sudo apt-get install -y maven
+CMD ["mvn", "clean", "test"]

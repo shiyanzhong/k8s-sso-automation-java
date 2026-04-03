@@ -7,9 +7,11 @@ import org.testng.annotations.Test;
 public class LoginTest extends BaseTest {
 
     @Test
-    public void testSSOLogin() {
+    public void testSSOLoginSuccess() {
         SSOLoginPage loginPage = new SSOLoginPage(driver);
-        loginPage.loginBySSO();
-        Assert.assertTrue(true, "SSO 登录模拟成功");
+        // 用测试账号登录
+        loginPage.loginBySSO("test_user", "test_pass");
+        // 校验登录成功
+        Assert.assertTrue(loginPage.isLoginSuccess(), "SSO登录失败，用户头像未显示");
     }
 }

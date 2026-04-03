@@ -13,28 +13,20 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(FrameworkConfig.WAIT_SECONDS));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(FrameworkConfig.EXPLICIT_WAIT));
         PageFactory.initElements(driver, this);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(FrameworkConfig.IMPLICIT_WAIT));
+    }
+    public void input(WebElement element, String text) {
+        element.clear();
+        element.sendKeys(text);
     }
 
-    public void open(String url) {
-        driver.get(url);
+    public void click(WebElement element) {
+        element.click();
     }
 
-    public void input(WebElement el, String text) {
-        el.clear();
-        el.sendKeys(text);
-    }
-
-    public void click(WebElement el) {
-        el.click();
-    }
-
-    public String getText(WebElement el) {
-        return el.getText();
-    }
-
-    public boolean titleContains(String key) {
-        return driver.getTitle().contains(key);
+    public String getText(WebElement element) {
+        return element.getText();
     }
 }

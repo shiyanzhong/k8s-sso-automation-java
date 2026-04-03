@@ -9,4 +9,9 @@ public class FrameworkConfig {
     public static final String PASSWORD = "syz123456";
 
     public static final int WAIT_SECONDS = 15;
+    public static final int IMPLICIT_WAIT = 10;
+    public static final int EXPLICIT_WAIT = 15;
+
+    // 系统地址
+    public static final String SYSTEM_HOME_URL = "https://github.com/";
 }
