@@ -1,0 +1,6 @@
+com\auto\core\BasePage.class
+com\auto\core\DriverManager.class
+com\auto\pages\FormOperatePage.class
+com\auto\pages\SSOLoginPage.class
+com\auto\config\FrameworkConfig.class
+com\auto\pages\HomePage.class

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="K8s-Enterprise-Test-Suite" verbose="1">
+    <test name="SystemAutomationTest">
+        <classes>
+            <class name="com.auto.tests.LoginTest"/>
+            <class name="com.auto.tests.PageLoadTest"/>
+            <class name="com.auto.tests.FormFlowTest"/>
+        </classes>
+    </test>
+</suite>

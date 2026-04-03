@@ -1,0 +1,4 @@
+com\auto\tests\PageLoadTest.class
+com\auto\tests\BaseTest.class
+com\auto\tests\FormFlowTest.class
+com\auto\tests\LoginTest.class
